@@ -98,8 +98,8 @@ plt.savefig("fg_CR_profile_sol.png")
 fig=plt.figure(figsize=(10, 8))
 ax=plt.subplot(111)
 
-# c = plt.imshow(np.log10((CR_map_pts.T)*1.0e22), cmap ='magma', extent=[-10, 10, -10, 10], vmin=-1, vmax=1, interpolation ='nearest', origin ='lower') 
-c = plt.imshow(np.log10((masked_image.T)*1.0e22), cmap ='magma', extent=[-10, 10, -10, 10], interpolation ='nearest', origin ='lower') 
+c = plt.imshow(np.log10((CR_map_pts.T)*1.0e22), cmap ='magma', extent=[-10, 10, -10, 10], vmin=-1, vmax=1, interpolation ='nearest', origin ='lower') 
+# c = plt.imshow(np.log10((masked_image.T)*1.0e22), cmap ='magma', extent=[-10, 10, -10, 10], interpolation ='nearest', origin ='lower') 
 
 cbar = plt.colorbar(c)
 cbar.set_label(r'${\rm log}_{10}\left[n_{\rm CR}(E)/({\rm 10^{-13}\, GeV^{-1}\, cm^{-3}})\right]$', fontsize=fs)
@@ -109,4 +109,4 @@ plt.title(r'$E=30\, {\rm GeV}$', fontsize=fs)
 for label_ax in (ax.get_xticklabels() + ax.get_yticklabels()):
     label_ax.set_fontsize(fs)
 
-plt.savefig("fg_30GeV_sol_mask.png")
+plt.savefig("fg_30GeV_sol.png")
